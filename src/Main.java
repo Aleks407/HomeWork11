@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 //Task 1
         System.out.println("Задача №1");
-        int yaer = 2024;
-        checkLeepAndPrint(yaer);
+        int year = 2024;
+        checkLeepAndPrint(year);
         checkLeepAndPrint(2000);
         checkLeepAndPrint(2100);
 //Task 2
@@ -16,17 +16,17 @@ public class Main {
 //Task 3
         System.out.println("Задача №3");
         int deliveryDistance =50;
-        System.out.println(checkDeliveryDistance(deliveryDistance));
+        System.out.println("Требуемое количество дней на доставку "+checkDeliveryDistance(deliveryDistance));
     }
 
     //Method for task 1
-    private static void checkLeepAndPrint(int yaer) {
-        if (yaer > 1584 & yaer % 4 == 0 & yaer % 100 != 0 || yaer % 400 == 0) {
-            System.out.println(yaer + " год является високосным");
-            //   } else if (yaer > 1584 & yaer % 4 == 0 & yaer % 400 != 0 & yaer % 100 != 0) {
-            //      System.out.println(yaer + " год является високосным");
+    private static void checkLeepAndPrint(int year) {
+        if (year % 4 == 0 & year % 100 != 0 || year % 400 == 0) {
+            System.out.println(year + " год является високосным");
+            //   } else if (year > 1584 & year % 4 == 0 & year % 400 != 0 & year % 100 != 0) {
+            //      System.out.println(year + " год является високосным");
         } else {
-            System.out.println(yaer + " год не является високосным");
+            System.out.println(year + " год не является високосным");
         }
 
     }
@@ -53,6 +53,7 @@ public class Main {
         int result = 0;
         if (deliveryDistance>0&deliveryDistance <= 20) {
             result = 1;
+
         }
         else if (deliveryDistance > 20 & deliveryDistance <= 60) {
             result = 2;
